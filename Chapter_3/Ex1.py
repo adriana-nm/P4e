@@ -1,4 +1,4 @@
-#Ex.1/2 Employee payment. (overtime >40 pay 1.5) (Rate: 10)
+#Ex.1/2 Employee payment. (overtime >40 pay 1.5)  (Rate: 10)
 shours = input("Enter Hours\n")
 srate = input("Enter rate\n")
 try:
