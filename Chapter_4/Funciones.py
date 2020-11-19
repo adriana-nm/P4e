@@ -36,6 +36,16 @@ print_twice(math.cos(math.pi))
 Hola="Helloooooo"
 print_twice(Hola)
 
+def greet(lang):
+    if lang=="es":
+        print ("Hola")
+    elif lang=="fr":
+        print ("Bonjour")
+    else:
+        print ("Hello")
+
+greet("es")
+
 #Functions with a result
 def addtwo(a, b):
     added = a+b
