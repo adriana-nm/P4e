@@ -29,13 +29,13 @@ while n>0:
     x=n
     print("")
 
-
+#Range with () means start in 5 till 0, incremented by -1
 for x in range(5,0,-1):
     for n in range(x):
         print("*", end="")
     print("")
 
-
+#Range starts in zero
 for x in range(5):
     for y in range(5-x):
         print("*", end="")
