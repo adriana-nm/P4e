@@ -70,7 +70,6 @@ print(statistics.mean ([10, 20, 100]))
 
 
 #Search of a value, with a boolean (True or False) variable (to know if a value was found in a list)
-
 found = False
 for values in (4, 6, 3, 8, 7, 5):
     if values == 8:
@@ -80,7 +79,6 @@ print(found)
 
 
 #Maximum with a loop (with no built-in function Max() )
-
 largest = None
 print('Before:', largest)
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -94,7 +92,6 @@ print('Largest:', largest)
 
 
 #Minimum with a loop (with no built-in function Min ())
-
 smallest = None
 print('Before:', smallest)
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -104,7 +101,6 @@ for itervar in [3, 41, 12, 9, 74, 15]:
 print('Smallest:', smallest)
 
 #Minimum with a loop (with a created function, called Mini)
-
 def mini(values):
     smallest = None
     for value in values:

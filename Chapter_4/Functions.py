@@ -1,4 +1,4 @@
-#DEFINIR UNA FUNCION
+#Define a function
 def print_lyrics ():
     print("la la la")
     print("le le le")
