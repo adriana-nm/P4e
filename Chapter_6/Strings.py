@@ -68,7 +68,9 @@ else:
 # str.strip() - Remove both beginning and ending whitespace
 # str.startswith() - Prefixes. Boolean (True/False) if starts with certain substring
 # str.endswith()- Suffixes. Boolean (True/False) if ends with certain substring
-# str.center() - Will center align the string. The character a declare will fill the extra spaces.
+# str.center() - Will center align the string. The character I declare will fill the extra spaces.
+#    .join() - It will join my string, separated by the text I declare before the join
+
 
 fruitnew = "Manzana"
 text = fruitnew.find("na", 3)
@@ -108,6 +110,10 @@ print (line.endswith(("a","b")))
 fruit = "banana"
 center = fruit.center(12,"O")
 print (center)
+
+myTuple = ("John", "Peter", "Vicky")
+x = "-".join(myTuple)
+print(x)
 
 #Parsing Strings (look into a string and find inside a substring and extract it)
 data = "From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008"
