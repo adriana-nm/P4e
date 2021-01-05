@@ -3,7 +3,7 @@
 
 fname = input ('Enter the file name:')
 count = 0
-sum = 0
+tsum = 0
 text = open(fname)
 for line in text:
     line = line.rstrip()
@@ -12,5 +12,5 @@ for line in text:
         snum = line[pointpos+1:]
         num = float(snum)
         count = count + 1
-        sum = sum + num
-print(sum/count)
+        tsum = tsum + num
+print(tsum/count)

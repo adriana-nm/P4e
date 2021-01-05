@@ -9,8 +9,19 @@
 #    't'       text mode (default)
 #    '+'       open a disk file for updating (reading and writing)
 
+# file.open()
+# file.write()
+# file.close()
 
 #READING FILES
+
+# Read all the text inside the file
+fhand = open('../mbox-short.txt')
+print(fhand.read())
+
+# Read the first line of the text. If I repeat it below, I read the second and so on.
+fhand = open('../mbox-short.txt')
+print(fhand.readline(5))
 
 # Returning amount of lines a file has (Very fast for big files)
 # If the file is too big for main memory, nee to read it in chunks, using for or while loop
@@ -65,6 +76,7 @@ for line in fhand:
 print('There were',count,'subjects lines in',fname)
 
 # Allow the user to enter a filename but protecting the code from wrong names of files
+# QUIT AND EXIT are the same. They exit the program.
 fname = input('Enter the file name:')
 try:
     fhand = open(fname)
@@ -77,7 +89,7 @@ for line in fhand:
         count = count + 1
 print('There were',count,'subjects lines in',fname)
 
-# Write a File. Open with mode 'w'.
+# Write a File. Open with mode 'w'. // IT CREATE A FILE!
 # If the file already exist, this mode clears out the old data and start fresh
 # If the file doesnt exist, a new one is created.
 
@@ -88,6 +100,9 @@ print(fout)
 # We need to end it with \n to mark the new line. Otherwise we'll replace it the next time we introduce a text.
 line1 = "This here's the wattle,\n"
 fout.write(line1)
+
+# FLUSH - If we want to save the data on the disk, but still dont close the file
+fout.flush()
 
 # We need to close the file, to make sure all the data is physically written to the disk (it wont be lost if power goes off).
 line2 = 'the emblem of our land.\n'

@@ -5,6 +5,10 @@ empty = []
 print(cheeses, numbers, empty)
 print(cheeses[1])
 
+stuff = list()
+stuff.append('book')
+print(stuff)
+
 # Reassign an item in a list
 numbers = [17, 123]
 numbers[1] = 5
@@ -25,6 +29,12 @@ print(len(cheeses))
 # If a list contains a nested list inside, it still count as 1 element
 list = ['spam',1,['Brie', 'Roquefort', 'Pol le Veq'], [1,2,3]]
 print(len(list))
+
+# Using RANGE in a list for a loop
+friends = ['Joseph','Glenn','Sally']
+for i in range(len(friends)):
+    friend = friends[i]
+    print('Happy New Year:',friend)
 
 # Traversing a list and updating values
 numbers = [5, 7, 15]
@@ -58,6 +68,12 @@ print(t[1:3])
 # list.append() - Adds a new element to the end of a list
 # list.extend() - Takes a list as an argument and append all the elements
 # list.sort()   - Arranges the elements of the list from low to high
+# list.count() - Return the # of times an element appears on the list
+# list.index() - Find the element searched, and return the position. If it's not on the list returns an error.
+# list.insert() - Adds a certain element before the position indicated. (Position, 'element')
+# list.pop() - In deleting
+# list.remove() - In deleting
+# list.reverse() - Reverse (opposite direction) the elements in the list.
 
 t = ['a', 'b', 'c']
 t.append('d')
@@ -71,6 +87,20 @@ print(t1)
 t = ['d', 'c', 'e', 'b', 'a']
 t.sort()
 print(t) 
+
+t = ['b', 'c', 'e', 'b', 'a']
+print(t.count('b'))
+
+t = ['b', 'c', 'e', 'b', 'a']
+print(t.index('e'))
+
+t = ['b', 'c', 'e', 'b', 'a']
+t.insert(2,'j')
+print(t)
+
+t = ['a', 'b', 'c']
+t.reverse()
+print(t)
 
 #DELETING ELEMENTS
 
@@ -135,26 +165,26 @@ print('Average: ',average)
 #STRINGS
 
 # List - Convert a string into a list of characters.
-
 s = 'spam'
 t = list(s)
 print(t)
 
 # Split - Divide a string into words
-
 s = 'what a nice function'
 t = s.split()
 print(t)
 print(t[2])
 
 # Delimiter - Split a string with a delimiter character.
-
 s = 'spam-spam-spam'
 delimiter = '-'
 print(s.split(delimiter))
 
-# Join - It takes a list of strings and concatenates the elements
+line = 'firts;second;third'
+print(line.split(';'))
 
+
+# Join - It takes a list of strings and concatenates the elements
 t = ['what','a','nice','function']
 delimiter = ' '
 print(delimiter.join(t))
@@ -169,6 +199,28 @@ for line in fhand:
     if not line.startswith('From '): continue
     words = line.split()
     print(words[2])
+
+#Extracting the mail extention
+#Example mail: From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith('From '): continue
+    words = line.split()
+    email = words[1]
+    pieces = email.split('@')
+    print(pieces[1])
+
+#Extracting all the lines that doesn't start with 'From'
+fhand = open('mbox-short.txt')
+for line in fhand:
+    words = line.split()
+    if len(words) == 0:
+        continue
+    if words[0] != 'From':
+        continue
+    print(words[2])
+
 
 # OBJECTS AND VALUES
 
@@ -194,6 +246,30 @@ print(a)
 # Avoid aliasing with mutable objects
 # Strings are inmutable objects, so not much problem
 
-#LIST ARGUMENTS
+# LIST ARGUMENTS
+# If you put a list as an argument, it can be modified, so beware.
+def delete_head(t):
+    del t[0]
 
+letters = ['a','b','c']
+delete_head(letters)
+print(letters)
 
+# An alternative is to create a function that creates and returns a new list.
+def tail(t):
+    return t[1:]
+
+letters = ['a','b','c']
+rest = tail(letters)
+print(rest)
+
+# Important to distinguish operations that modify a list, and the ones that create a list.
+# Ex. append modifies a list. But + operator creates a new list.
+t1 = [1, 2]
+t2 = t1.append(3)
+print(t1)   #[1,2,3]
+print(t2)   #None
+
+t1 = [1,2]
+t3 = t1 + [3]
+print(t3)
