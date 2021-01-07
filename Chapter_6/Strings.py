@@ -7,6 +7,8 @@ print(letter)
 fruit = "banana"
 print(len(fruit))
 
+# Last character is -1. The previous one is -2, and so on.
+
 # Traversal with a While
 index = 0
 while index < len(fruit):
@@ -70,7 +72,7 @@ else:
 # str.endswith()- Suffixes. Boolean (True/False) if ends with certain substring
 # str.center() - Will center align the string. The character I declare will fill the extra spaces.
 #    .join() - It will join my string, separated by the text I declare before the join
-
+# str.punctuation - Show the characters that are considered as punctuation.
 
 fruitnew = "Manzana"
 text = fruitnew.find("na", 3)
@@ -114,6 +116,9 @@ print (center)
 myTuple = ("John", "Peter", "Vicky")
 x = "-".join(myTuple)
 print(x)
+
+import string
+print(string.punctuation)
 
 #Parsing Strings (look into a string and find inside a substring and extract it)
 data = "From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008"

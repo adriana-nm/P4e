@@ -96,7 +96,7 @@ print('There were',count,'subjects lines in',fname)
 fout = open ('output.txt','w')
 print(fout)
 
-# Introduce data into the new file. If I print it, it will return the number of characthers written.
+# Introduce data into the new file. If I print it, it will return the number of characters written.
 # We need to end it with \n to mark the new line. Otherwise we'll replace it the next time we introduce a text.
 line1 = "This here's the wattle,\n"
 fout.write(line1)
