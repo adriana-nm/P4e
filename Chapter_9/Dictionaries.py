@@ -31,8 +31,9 @@ print(len(eng2sp))
 
 # FIND A VALUE. First you need to use the method VALUES to return data than can be converted into a list.
 # Then you con use the in operator to search for the value you need.
+eng2sp = {'one':'uno','two':'dos','three':'tres'}
 vals = list(eng2sp.values())
-print('uno' in vals)
+print('uno' in vals)            # Return True/False
 
 # Print keys, values, and items
 names = {'chuck':1,'annie':42,'jan':100}

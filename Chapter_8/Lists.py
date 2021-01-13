@@ -9,6 +9,10 @@ stuff = list()
 stuff.append('book')
 print(stuff)
 
+stuff = list(['watch','keys'])
+stuff.append('book')
+print(stuff)
+
 # Reassign an item in a list
 numbers = [17, 123]
 numbers[1] = 5
@@ -65,6 +69,9 @@ t = ['a', 'b', 'c', 'd', 'e']
 print(t[1:3])
 
 # List Methods
+t = list()
+print(dir(t))
+
 # list.append() - Adds a new element to the end of a list
 # list.extend() - Takes a list as an argument and append all the elements
 # list.sort()   - Arranges the elements of the list from low to high
